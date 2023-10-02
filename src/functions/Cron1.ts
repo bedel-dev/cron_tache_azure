@@ -3,8 +3,7 @@ import axios from 'axios';
 import { API_BASE_URL } from '../../config';
 
 export async function Cron1(myTimer: Timer, context: InvocationContext): Promise<void> {
-    context.log('Timer function processed request.');
-        // POST vers une URL
+
         try {
             const response = await axios.post(API_BASE_URL+'/v1.4/phone_messages/send.json', { /* Données à envoyer */ });
             console.log('Réponse de la requête POST :', response.data);

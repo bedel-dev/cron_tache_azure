@@ -6,9 +6,9 @@ export async function Cron1(myTimer: Timer, context: InvocationContext): Promise
 
         try {
             const response = await axios.post(API_BASE_URL+'/v1.4/phone_messages/send.json', { /* Données à envoyer */ });
-            console.log('Réponse de la requête POST :', response.data);
+            context.log('Réponse de la requête POST :', response.data);
         } catch (error) {
-            console.error('Erreur lors de la requête POST :', error);
+            context.error('Erreur lors de la requête POST :', error);
         }
     
         if (myTimer.isPastDue) {

@@ -2,7 +2,6 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy Node.js project to Azure Function App - cron-lidar-ppai
-
 on:
   push:
     branches:

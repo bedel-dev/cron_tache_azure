@@ -20,3 +20,4 @@ app.timer('Cron1', {
     schedule: '0 */1 * * * *',
     handler: Cron1
 });
+
